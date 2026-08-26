@@ -1,0 +1,131 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: var(--text-color); */
+}
+
+body {
+    background-color: rgb(37, 0, 60);
+    color: wheat;
+    width: 100%;
+    min-height: 100dvh;
+
+    /* Smooth transition when toggle theme*/
+    /* transition: background-color 0.3s ease, color 0.3s ease;  */
+}
+
+.site-wrapper {
+    /* border: 2px solid yellow; */
+    width: 100%;
+    min-height: 100dvh;
+
+    /* For hiding overflow horizontally */
+    overflow-x: hidden;
+
+    position: relative;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    place-items: center; */
+
+    display: flex;
+    flex-direction: column;
+    /* For Converter */
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+    padding: 3rem 1.9rem;
+
+    text-align: center;
+}
+
+.input-section {
+    /* border: 3px solid yellow; */
+    width: 100%;
+    max-width: 500px;
+}
+#search-form {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#location-label {
+    /* text-align: start; */
+    font-size: clamp(1rem, 5vw, 1.4rem);
+}
+#location-input {
+    height: 2.3rem;
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid wheat;
+    /* text-align: center; */
+    padding: 0.3rem 0.5rem;
+    color: wheat;
+}
+#showBtn {
+    height: 2rem;
+    outline: none;
+    border: none;
+
+    border-radius: 5px;
+}
+.output-section {
+    /* border: 1px solid yellow; */
+    width: 100%;
+    max-width: 500px;
+}
+.display {
+    /* border: 1px solid red; */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.display h2 {
+    font-style: italic;
+}
+
+.display-main-content > p {
+    /* border: 1px solid yellow; */
+    font-family: "Courier New", Courier, monospace;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.display-details {
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.errorMessage {
+    color: red;
+    font-family: "Courier New", Courier, monospace;
+    /* font-style: italic; */
+}
+
+@media (max-width: 555px) {
+    /* just changed order of these two sections in mobile view */
+    .input-section {
+        /* border: 1px solid red; */
+        order: 2;
+    }
+    .output-section {
+        /* border: 1px solid red; */
+        order: 1;
+    }
+}

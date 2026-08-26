@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+
+    <script>
+        // Initially Browser tries to render White when JS is not yet loaded so first we load JS with theme preferences being set
+        const savedTheme = localStorage.getItem('theme'); //first access from local
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; //if system is in dark mode then this
+        const targetTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', targetTheme);
+    </script>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    
+    <div class="site-wrapper">
+
+        <!-- INPUT SECTION -->
+        <!-- Weather Header -->
+         <h1>Sushil's Weather API</h1>
+
+         <div class="input-section">
+             
+             <!-- Weather Form -->
+             <form action="" id="search-form">
+     
+                 <label for="location-input" id="location-label">Search Location : </label>
+                 <input type="text" id="location-input" placeholder="city, state, country">
+     
+                 <button type="submit" id="showBtn">Show Weather</button>
+             </form>
+
+
+         </div>
+        
+
+         <!-- OUTPUT SECTION -->
+        <div class="output-section">
+            
+            <!-- Weather Display -->
+            <div class="display">
+                
+                <div class="display-main-content">
+                    <p id="initialMessage">Ready for today's forecast?</p>
+                    <!-- <h2>Nashik</h2>
+                    <img src="https://openweathermap.org/payload/api/media/file/10d%402x.png" alt="">
+                    <p>Desc: Rainy is Better</p> -->
+                </div>
+
+
+                <div class="display-details">
+                    <!-- <p>Temperature : 55.5deg C</p>
+                    <p>Humidity : 28%</p>
+                    <p>Weather : </p> -->
+                </div>
+    
+             
+            </div>
+
+
+        </div>
+
+        
+
+
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+   
+</body>
+</html>

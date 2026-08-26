@@ -1,0 +1,47 @@
+{
+    "coord": {
+        "lon": 73.7902,
+        "lat": 20.0112
+    },
+    "weather": [
+        {
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 25.65,
+        "feels_like": 26.36,
+        "temp_min": 25.65,
+        "temp_max": 25.65,
+        "pressure": 1008,
+        "humidity": 80,
+        "sea_level": 1008,
+        "grnd_level": 936
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.87,
+        "deg": 263,
+        "gust": 9.7
+    },
+    "rain": {
+        "1h": 0.12
+    },
+    "clouds": {
+        "all": 87
+    },
+    "dt": 1787660628,
+    "sys": {
+        "country": "IN",
+        "sunrise": 1787618858,
+        "sunset": 1787664413
+    },
+    "timezone": 19800,
+    "id": 8131501,
+    "name": "Nashik",
+    "cod": 200
+}
