@@ -8,7 +8,16 @@
 }
 
 body {
-    background-color: rgb(37, 0, 60);
+    /* background-color: #25003c; */
+    background: radial-gradient(
+        circle at center,
+        #25003c 0%,
+        #11001a 60%,
+        #05000a 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     color: wheat;
     width: 100%;
     min-height: 100dvh;
@@ -43,6 +52,11 @@ body {
     text-align: center;
 }
 
+h1 {
+    color: #ffe4d6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .input-section {
     /* border: 3px solid yellow; */
     width: 100%;
@@ -58,10 +72,27 @@ body {
 #location-label {
     /* text-align: start; */
     font-size: clamp(1rem, 5vw, 1.4rem);
+    /* font-style: italic; */
+    font-family: "Courier New", Courier, monospace;
 }
+/* Prevents Chrome from turning the input box white during autocomplete/autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    /* Explains to Chrome to use a transparent transition mask over the background */
+    -webkit-box-shadow: 0 0 100px 1000px #1d012f inset !important;
+    
+    /* Keeps your font color white or light even when autocomplete is active */
+    -webkit-text-fill-color: wheat !important;
+    
+    /* Smoothes out font rendering over the autofill override */
+    /* transition: background-color 5000s ease-in-out 0s; */
+}
+
 #location-input {
     height: 2.3rem;
-    background: rgba(0, 0, 0, 0);
+    background: #00000000;
     outline: none;
     border: none;
     border-bottom: 0.5px solid wheat;
@@ -75,6 +106,7 @@ body {
     border: none;
 
     border-radius: 5px;
+    background-color: #ffe4d6;
 }
 .output-section {
     /* border: 1px solid yellow; */
@@ -113,7 +145,7 @@ body {
 }
 
 .errorMessage {
-    color: red;
+    color: rgb(255, 41, 41);
     font-family: "Courier New", Courier, monospace;
     /* font-style: italic; */
 }
