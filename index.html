@@ -4,17 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sushil's Weather API</title>
-
-        <script>
-            // Initially Browser tries to render White when JS is not yet loaded so first we load JS with theme preferences being set
-            const savedTheme = localStorage.getItem("theme"); //first access from local
-            const systemPrefersDark = window.matchMedia(
-                "(prefers-color-scheme: dark)"
-            ).matches; //if system is in dark mode then this
-            const targetTheme =
-                savedTheme || (systemPrefersDark ? "dark" : "light");
-            document.documentElement.setAttribute("data-theme", targetTheme);
-        </script>
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" type="image/png" href="assets/cloudy.png" />
     </head>
